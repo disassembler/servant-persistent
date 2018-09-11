@@ -25,6 +25,23 @@ Alternatively, cabal can be used:
 2. `cabal install --dependencies-only && cabal configure && cabal build`
 3. `cabal run`
 
+### Nix
+
+This project can also be built using the included `default.nix` with `nix-build`
+or with snack patched with the commits from the following pull requests:
+
+* https://github.com/nmattia/snack/pull/64
+* https://github.com/nmattia/snack/pull/66
+
+After snack is built, the following commands work for incremental building:
+
+* `snack build`
+* `snack ghci`
+* `ghcid -c "snack ghci"`
+* `snack run`
+
+For more information on installing and using snack, see https://github.com/nmattia/snack
+
 ### Database:
 
 You will need PostgreSQL installed and listening on port 5432. The default configuration uses a database name `perservant` with username/password test:test.
